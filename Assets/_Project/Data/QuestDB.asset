@@ -129,13 +129,13 @@ MonoBehaviour:
       type: {class: GatherQuestTask, ns: DevionGames.QuestSystem.Integrations.InventorySystem, asm: Assembly-CSharp}
       data:
         m_Name: New Task
-        m_Description: Find an Oil Can to oil the hinges
+        m_Description: Find an full Oil Can to oil the hinges
         m_RequiredProgress: 1
         m_ProgressMessage: '{0}/{1}'
         m_UseTimeLimit: 0
         m_TimeLimit: 300
         m_Optional: 0
-        m_Item: {fileID: 4531610141893146662, guid: 0157be1f5efdfe445a8f67b7d8b37b7f, type: 2}
+        m_Item: {fileID: 4531610141893146662, guid: eeb0e310d1a4c134387e52b0dc13fa44, type: 2}
         m_Window: Inventory
         m_RemoveItems: 1
 --- !u!114 &-5057906856322482322

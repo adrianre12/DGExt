@@ -23,7 +23,7 @@ MonoBehaviour:
         m_Type: DevionGames.CrossFade
         m_Enabled: 1
         m_Target: 0
-        m_AnimatorState: ArchDoorOpen
+        m_AnimatorState: RustyDoorOpen
         m_TransitionDuration: 0.1
     00000001:
       type: {class: SetBlackboardTooltip, ns: DGExt, asm: DGExt}

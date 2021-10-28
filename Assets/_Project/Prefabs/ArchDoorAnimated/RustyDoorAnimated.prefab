@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 88560608642718166}
   - component: {fileID: 1106448236209939225}
   m_Layer: 0
-  m_Name: ArchDoorAnimated
+  m_Name: RustyDoorAnimated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

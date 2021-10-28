@@ -355,7 +355,6 @@ MonoBehaviour:
   - id: 0
   - id: 1
   - id: 2
-  - id: 3
   m_Interruptable: 0
   references:
     version: 1
@@ -366,7 +365,7 @@ MonoBehaviour:
         m_Enabled: 1
         SequenceId: 2
         SequenceIdName: SequenceId
-        IncrementOnSuccess: 1
+        IncrementOnSuccess: 0
         actionTemplate: {fileID: 11400000, guid: 5c4cecb6e7b8549469cd3fff87c9b67a, type: 2}
     00000001:
       type: {class: RunSequence, ns: DGExt, asm: DGExt}
@@ -386,12 +385,6 @@ MonoBehaviour:
         SequenceIdName: SequenceId
         IncrementOnSuccess: 1
         actionTemplate: {fileID: 11400000, guid: f7c356d43eb78874b9fb40d44fb3550f, type: 2}
-    00000003:
-      type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Log
-        m_Enabled: 1
-        m_Message: RD end
 --- !u!114 &738619659149827037
 MonoBehaviour:
   m_ObjectHideFlags: 0

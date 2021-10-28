@@ -54,7 +54,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArchDoorAnimated
+  m_Name: RustyDoorAnimated
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -90,7 +90,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6153445964311229363}
-    m_Position: {x: 310, y: 100, z: 0}
+    m_Position: {x: 290, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -108,7 +108,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArchDoorOpen
+  m_Name: RustyDoorOpen
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -134,7 +134,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArchDoorRattle
+  m_Name: RustyDoorRattle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -161,7 +161,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArchDoorClose
+  m_Name: RustyDoorClose
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
