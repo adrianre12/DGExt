@@ -32,7 +32,7 @@ MonoBehaviour:
         m_Type: DevionGames.CrossFade
         m_Enabled: 1
         m_Target: 0
-        m_AnimatorState: ArchDoorRattle
+        m_AnimatorState: RustyDoorRattle
         m_TransitionDuration: 0.1
     00000002:
       type: {class: QuestOpen, ns: DGExt, asm: DGExt}
