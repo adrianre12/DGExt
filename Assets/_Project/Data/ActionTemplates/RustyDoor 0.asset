@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79656a93035dc85429f6ab28c75c181b, type: 3}
+  m_Name: RustyDoor 0
+  m_EditorClassIdentifier: 
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  references:
+    version: 1
+    00000000:
+      type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.Log
+        m_Enabled: 1
+        m_Message: RustyDoor 0 start
+    00000001:
+      type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
+      data:
+        m_Type: DevionGames.CrossFade
+        m_Enabled: 1
+        m_Target: 0
+        m_AnimatorState: ArchDoorRattle
+        m_TransitionDuration: 0.1
+    00000002:
+      type: {class: QuestOpen, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.QuestOpen
+        m_Enabled: 1
+        m_Title: Availible Quests
+        m_Text: Select a quest to continue.
+        SelectFirstQuest: 0
+    00000003:
+      type: {class: HasQuest, ns: DevionGames.QuestSystem, asm: DevionGames.QuestSystem}
+      data:
+        m_Type: DevionGames.QuestSystem.HasQuest
+        m_Enabled: 1
+        requiredQuest: {fileID: -6515777227877683563, guid: a477167a84dbc334aa1f4952944733e5, type: 2}
+        m_Status: 1
+    00000004:
+      type: {class: SetBlackboardTooltip, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.SetBlackboardTooltip
+        m_Enabled: 1
+        TitleName: ToolTipTitle
+        InstructionName: ToolTipInstruction
+        Title: Rusty Door
+        Instruction: Oil Hinges
