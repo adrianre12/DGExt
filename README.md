@@ -13,6 +13,8 @@ This requires the Free assets 'Devion Games Inventory Manager' and 'Quick Outlin
 Steps to run the demo;
 - Clone this repository.
 - Start Unity and add the required assets.
+- Using the Devion Module Manager install the Quest System and Quest Examples.
+- Use the Inventory systems Integration asset under Quest System Integrations.
 - Fix a class naming issue in 'Quick Outline'. See bellow.
 
 ## Quick Outline
