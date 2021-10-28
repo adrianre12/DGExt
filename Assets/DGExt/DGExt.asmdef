@@ -1,7 +1,15 @@
 {
     "name": "DGExt",
     "rootNamespace": "DGExt",
-    "references": [],
+    "references": [
+        "GUID:88b6a96a69c522e46b3504e12b7c9972",
+        "GUID:7e11b191bda03244cab010a91ca9c4d9",
+        "GUID:f932633e89332314dac2cabb4cf243bc",
+        "GUID:12395da4a6225094787d545ddf532f99",
+        "GUID:907b3328f60158944b2faf1e1b0a7749",
+        "GUID:bc341db340573d349b7e439dd3350736",
+        "GUID:1e2562d33d8ad4640ab8f8ae94a6b7b9"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
