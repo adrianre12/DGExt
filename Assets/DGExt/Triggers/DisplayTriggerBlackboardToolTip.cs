@@ -19,7 +19,7 @@ namespace DGExt
         protected string InstructionName = "ToolTipInstruction";
         protected Blackboard m_blackboard;
 
-        private QuickOutline.Outline outline;
+/*        private QuickOutline.Outline outline;
 
         private void Awake()
         {
@@ -32,7 +32,7 @@ namespace DGExt
                 outline.OutlineWidth = 1;
                 outline.enabled = false;
             }
-        }
+        }*/
 
         private void Start()
         {
@@ -51,7 +51,7 @@ namespace DGExt
 
         protected virtual void DoDisplayTooltip(bool state)
         {
-            outline.enabled = state;
+            //outline.enabled = state;
             if (this.m_Tooltip == null) return;
 
             string title = m_blackboard.GetValue<string>(TitleName);
