@@ -11,7 +11,7 @@ The project includes a Demo scene to show use cases. More details can be found i
 
 ## Install
 This requires the Free assets 'Devion Games Inventory Manager' or the Paid for 'RPG Kit'
-Optionally it is possible to add item outlining the free asset 'Quick Outline'.
+Optionally it is possible to add item outlining with the free asset 'Quick Outline'.
 
 Steps to run the demo;
 - Create a new Unity Project.
@@ -20,7 +20,7 @@ Steps to run the demo;
 - Use the Inventory systems Integration asset under Quest System Integrations.
 - Download and install the DGExt asset.
 - Download and install the DGExtExamples asset.
-- Under Assets > SGExtExamples > Scenes open and play the Demo scene.
+- Under Assets > DGExtExamples > Scenes open and play the Demo scene.
 
 ## Adding Outlining
 An example of how to do item outlining can be added. This will outline items with a red border when the tooltip is displayed.
