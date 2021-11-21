@@ -16336,29 +16336,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1692304078}
     m_Modifications:
-    - target: {fileID: -5929987634194605059, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
-      propertyPath: m_Title
-      value: Alice
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634550540918060654, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
-      propertyPath: m_ItemGroup
-      value: 
-      objectReference: {fileID: 9190883860228180263, guid: eeb0e310d1a4c134387e52b0dc13fa44, type: 2}
     - target: {fileID: 8634550540918060656, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634550540918060656, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634550540918060656, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634550540918060656, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8634550540918060656, guid: 93e4d3ccf7aab4940b58932f25b77b21, type: 3}
       propertyPath: m_LocalPosition.x
