@@ -62,3 +62,4 @@ crashlytics-build.properties
 /[Aa]ssets/*
 !/[Aa]ssets/_[Pp]roject/
 !/[Aa]ssets/DGExt/
+!/[Aa]ssets/DGExtExamples/
