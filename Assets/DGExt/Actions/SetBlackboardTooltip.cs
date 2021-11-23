@@ -17,6 +17,13 @@ namespace DGExt
         [SerializeField]
         protected string Instruction;
 
+        public override void OnSequenceStart()
+        {
+            base.OnSequenceStart();
+            if (blackboard == null)
+                Debug.LogWarning("Blackboard not found");
+        }
+
         public override ActionStatus OnUpdate()
         {
             if (blackboard != null)

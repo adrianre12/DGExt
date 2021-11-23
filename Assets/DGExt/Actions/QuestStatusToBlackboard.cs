@@ -27,6 +27,13 @@ namespace DGExt
         [SerializeField]
         protected int _canceled = (int)Status.Canceled;
 
+        public override void OnSequenceStart()
+        {
+            base.OnSequenceStart();
+            if (blackboard == null)
+                Debug.LogWarning("Blackboard not found");
+        }
+
         public override ActionStatus OnUpdate()
         {
             int status = -1;
