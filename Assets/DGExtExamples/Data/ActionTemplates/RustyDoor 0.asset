@@ -17,16 +17,9 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
-  - id: 4
   references:
     version: 1
     00000000:
-      type: {class: Log, ns: DevionGames, asm: DevionGames.Triggers}
-      data:
-        m_Type: DevionGames.Log
-        m_Enabled: 1
-        m_Message: RustyDoor 0 start
-    00000001:
       type: {class: CrossFade, ns: DevionGames, asm: DevionGames.Triggers}
       data:
         m_Type: DevionGames.CrossFade
@@ -34,7 +27,7 @@ MonoBehaviour:
         m_Target: 0
         m_AnimatorState: RustyDoorRattle
         m_TransitionDuration: 0.1
-    00000002:
+    00000001:
       type: {class: QuestOpen, ns: DGExt, asm: DGExt}
       data:
         m_Type: DGExt.QuestOpen
@@ -42,14 +35,14 @@ MonoBehaviour:
         m_Title: Availible Quests
         m_Text: Select a quest to continue.
         SelectFirstQuest: 0
-    00000003:
+    00000002:
       type: {class: HasQuest, ns: DevionGames.QuestSystem, asm: DevionGames.QuestSystem}
       data:
         m_Type: DevionGames.QuestSystem.HasQuest
         m_Enabled: 1
         requiredQuest: {fileID: -6515777227877683563, guid: a477167a84dbc334aa1f4952944733e5, type: 2}
         m_Status: 1
-    00000004:
+    00000003:
       type: {class: SetBlackboardTooltip, ns: DGExt, asm: DGExt}
       data:
         m_Type: DGExt.SetBlackboardTooltip
