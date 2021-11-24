@@ -355,10 +355,23 @@ MonoBehaviour:
   - id: 0
   - id: 1
   - id: 2
+  - id: 3
   m_Interruptable: 0
   references:
     version: 1
     00000000:
+      type: {class: QuestStatusToBlackboard, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.QuestStatusToBlackboard
+        m_Enabled: 1
+        _quest: {fileID: -6515777227877683563, guid: a477167a84dbc334aa1f4952944733e5, type: 2}
+        _variableName: SequenceId
+        _inactive: 0
+        _active: 0
+        _completed: 2
+        _failed: 0
+        _canceled: 0
+    00000001:
       type: {class: RunSequence, ns: DGExt, asm: DGExt}
       data:
         m_Type: DGExt.RunSequence
@@ -367,7 +380,7 @@ MonoBehaviour:
         SequenceIdName: SequenceId
         IncrementOnSuccess: 0
         actionTemplate: {fileID: 11400000, guid: 5c4cecb6e7b8549469cd3fff87c9b67a, type: 2}
-    00000001:
+    00000002:
       type: {class: RunSequence, ns: DGExt, asm: DGExt}
       data:
         m_Type: DGExt.RunSequence
@@ -376,7 +389,7 @@ MonoBehaviour:
         SequenceIdName: SequenceId
         IncrementOnSuccess: 1
         actionTemplate: {fileID: 11400000, guid: 7a84e218d0b5ebf44b98f9b4fa5ea039, type: 2}
-    00000002:
+    00000003:
       type: {class: RunSequence, ns: DGExt, asm: DGExt}
       data:
         m_Type: DGExt.RunSequence
