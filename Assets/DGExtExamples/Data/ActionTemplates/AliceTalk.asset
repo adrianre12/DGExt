@@ -15,17 +15,27 @@ MonoBehaviour:
   actions:
   - id: 0
   - id: 1
+  - id: 2
   references:
     version: 1
     00000000:
-      type: {class: ShowTalkWindow, ns: DevionGames.QuestSystem, asm: DevionGames.QuestSystem}
+      type: {class: QuestTalkOpen, ns: DGExt, asm: DGExt}
       data:
-        m_Type: DevionGames.QuestSystem.ShowTalkWindow
+        m_Type: DGExt.QuestTalkOpen
         m_Enabled: 1
-        m_WindowName: Quest Talk
-        m_Title: Alice
-        m_Text: Hello you are talking to Alice the vendor of fine oil cans.
+        _WindowName: Quest Talk
+        _Title: Alice
+        _Text: Hello i am Alice the vendor of fine oil cans.
     00000001:
+      type: {class: QuestTalkOpen, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.QuestTalkOpen
+        m_Enabled: 1
+        _WindowName: Quest Talk
+        _Title: Talk
+        _Text: After we finish talking you will be able to buy and sell your oil
+          cans
+    00000002:
       type: {class: AddProgress, ns: DevionGames.QuestSystem, asm: DevionGames.QuestSystem}
       data:
         m_Type: DevionGames.QuestSystem.AddProgress
