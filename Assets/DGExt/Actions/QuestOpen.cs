@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace DGExt
 {
+    [Icon("Quest")]
     [ComponentMenu("Quest System/Open Quest Window")]
     public class QuestOpen : Action
     {

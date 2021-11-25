@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79656a93035dc85429f6ab28c75c181b, type: 3}
+  m_Name: RustyDoor 2
+  m_EditorClassIdentifier: 
+  actions:
+  - id: 0
+  - id: 1
+  - id: 2
+  references:
+    version: 1
+    00000000:
+      type: {class: IfBoolSetInt, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.IfBoolSetInt
+        m_Enabled: 1
+        checkVariableName: RustyDoorOpen
+        toggle: 1
+        setIntName: RustyDoorState
+        trueValue: 1
+        falseValue: 2
+    00000001:
+      type: {class: RunSequence, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.RunSequence
+        m_Enabled: 1
+        SequenceId: 1
+        SequenceIdName: RustyDoorState
+        IncrementOnSuccess: 0
+        actionTemplate: {fileID: 11400000, guid: 810cd26e68a4b424db144f7660442d02, type: 2}
+    00000002:
+      type: {class: RunSequence, ns: DGExt, asm: DGExt}
+      data:
+        m_Type: DGExt.RunSequence
+        m_Enabled: 1
+        SequenceId: 2
+        SequenceIdName: RustyDoorState
+        IncrementOnSuccess: 0
+        actionTemplate: {fileID: 11400000, guid: 71f5ce28414755e4ca80ad9b57ae6458, type: 2}

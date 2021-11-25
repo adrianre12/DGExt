@@ -22,7 +22,10 @@ namespace DGExt
         {
             OK = true;
             if (blackboard == null)
+            {
+                Debug.LogWarning("Blackboard not found");
                 OK = false;
+            }
             if (checkVariableName == null || checkVariableName == "")
                 OK = false;
             if (setIntName == null || setIntName == "")

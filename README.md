@@ -8,6 +8,7 @@ These are extensions for Devion Games Inventory System that I am using in my gam
 - Being able to use the Quest window from within an action.
 
 The project includes a Demo scene to show use cases. More details can be found in the [documentation.](/Documentation/Sub-ActionTemplates.pdf)
+Videos can be found in the playlist [DGExt](https://www.youtube.com/playlist?list=PLCZolJ4GDO6_87a42ku9bACn9FbKyGVQJ)
 
 ## Install
 This requires the Free assets 'Devion Games Inventory Manager' or the Paid for 'RPG Kit'
