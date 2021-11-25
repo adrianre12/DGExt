@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Examine : MonoBehaviour
 {
+    public GameObject _postProcessingVolume;
 
     Camera mainCam;//Camera Object Will Be Placed In Front Of
     GameObject clickedObject;//Currently Clicked Object
@@ -11,9 +11,11 @@ public class Examine : MonoBehaviour
     //Holds Original Postion And Rotation So The Object Can Be Replaced Correctly
     Vector3 originaPosition;
     Vector3 originalRotation;
+    private int originalLayer;
 
     //If True Allow Rotation Of Object
     bool examineMode;
+
 
     void Start()
     {
@@ -47,9 +49,12 @@ public class Examine : MonoBehaviour
                 //Save The Original Postion And Rotation
                 originaPosition = clickedObject.transform.position;
                 originalRotation = clickedObject.transform.rotation.eulerAngles;
+                originalLayer = clickedObject.layer;
+                clickedObject.layer = LayerMask.NameToLayer("Examine");
+                _postProcessingVolume.SetActive( true);
 
                 //Now Move Object In Front Of Camera
-                clickedObject.transform.position = mainCam.transform.position + (transform.forward * 3f);
+                clickedObject.transform.position = mainCam.transform.position + (mainCam.transform.forward * 3f);
 
                 //Pause The Game
                 Time.timeScale = 0;
@@ -81,6 +86,8 @@ public class Examine : MonoBehaviour
             //Reset Object To Original Position
             clickedObject.transform.position = originaPosition;
             clickedObject.transform.eulerAngles = originalRotation;
+            clickedObject.layer = originalLayer;
+            _postProcessingVolume.SetActive(false);
 
             //Unpause Game
             Time.timeScale = 1;
