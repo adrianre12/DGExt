@@ -367,7 +367,7 @@ MonoBehaviour:
         _quest: {fileID: -6515777227877683563, guid: a477167a84dbc334aa1f4952944733e5, type: 2}
         _variableName: SequenceId
         _inactive: 0
-        _active: 0
+        _active: 1
         _completed: 2
         _failed: 0
         _canceled: 0
@@ -387,8 +387,8 @@ MonoBehaviour:
         m_Enabled: 1
         SequenceId: 1
         SequenceIdName: SequenceId
-        IncrementOnSuccess: 1
-        actionTemplate: {fileID: 11400000, guid: 7a84e218d0b5ebf44b98f9b4fa5ea039, type: 2}
+        IncrementOnSuccess: 0
+        actionTemplate: {fileID: 11400000, guid: ae39f797ec6f31148bdfa90311b6f770, type: 2}
     00000003:
       type: {class: RunSequence, ns: DGExt, asm: DGExt}
       data:
@@ -396,7 +396,7 @@ MonoBehaviour:
         m_Enabled: 1
         SequenceId: 0
         SequenceIdName: SequenceId
-        IncrementOnSuccess: 1
+        IncrementOnSuccess: 0
         actionTemplate: {fileID: 11400000, guid: f7c356d43eb78874b9fb40d44fb3550f, type: 2}
 --- !u!114 &738619659149827037
 MonoBehaviour:
