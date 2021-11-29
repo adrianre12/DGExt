@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class Examine : MonoBehaviour
+public class ExamineOrig : MonoBehaviour
 {
     public GameObject _postProcessingVolume;
 

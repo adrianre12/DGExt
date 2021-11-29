@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - ExamineCamara
   layers:
   - Default
   - TransparentFX
