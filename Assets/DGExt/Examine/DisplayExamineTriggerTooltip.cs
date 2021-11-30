@@ -29,7 +29,7 @@ namespace DGExt
         {
             if (!_trigger.InUse && _trigger.InRange && _trigger.IsBestTrigger())
             {
-                DoDisplayTooltip(!_trigger.Viewing);
+                DoDisplayTooltip(!_trigger.WindowOpen);
             }
         }
 

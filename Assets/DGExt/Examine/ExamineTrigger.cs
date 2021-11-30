@@ -8,31 +8,34 @@ namespace DGExt
     public class ExamineTrigger : Trigger
     {
         [Header("Examine")]
-        [SerializeField]
-        protected string _WindowName = "Examine Window";
-        protected ExamineWindow _ExamineWindow;
-        
-        [HideInInspector]
-        public bool Viewing;
-
         public KeyCode ExamineKey = KeyCode.E;
+        [SerializeField]
+        protected string _windowName = "Examine Window";
+        protected ExamineWindow _ExamineWindow;
+        [SerializeField]
+        protected string _windowTitle = "Examine";
+        [SerializeField]
+        protected float _zoom = 1.0f;
+
+        [HideInInspector]
+        public bool WindowOpen;
 
         protected override void Start()
         {
             base.Start();
 
-            _ExamineWindow = WidgetUtility.Find<ExamineWindow>(_WindowName);
+            _ExamineWindow = WidgetUtility.Find<ExamineWindow>(_windowName);
             if (_ExamineWindow == null)
-                Debug.LogWarning("Missing window " + _WindowName + " in scene!");
+                Debug.LogWarning("Missing window " + _windowName + " in scene!");
         }
 
         protected override void Update()
         {
             base.Update();
 
-            if (Input.GetKeyDown(ExamineKey) && triggerType.HasFlag(TriggerInputType.Key) && InRange) // && IsBestTrigger())
+            if (Input.GetKeyDown(ExamineKey) && triggerType.HasFlag(TriggerInputType.Key) && InRange && IsBestTrigger())
             {
-                if (Viewing)
+                if (WindowOpen)
                 {
                     _ExamineWindow.Close();
                 }
@@ -40,10 +43,10 @@ namespace DGExt
                 {
                     _ExamineWindow.RegisterListener("OnClose", (CallbackEventData eventData) =>
                     {
-                        Viewing = false;
+                        WindowOpen = false;
                     });
-                    _ExamineWindow.Show(gameObject);
-                    Viewing = true;
+                    WindowOpen = true;
+                    _ExamineWindow.Show(gameObject, _windowTitle, ExamineKey, _zoom);
                 }
             }
         }
