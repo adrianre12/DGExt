@@ -65,14 +65,16 @@ namespace DGExt
                 rb.isKinematic = true;
             
             _examineObject.layer = LayerMask.NameToLayer("Examine");
-            _postProcessingVolume.SetActive(true);
+            if (_postProcessingVolume != null)
+                _postProcessingVolume.SetActive(true);
         }
 
         public override void Close()
         {
             base.Close();
             Destroy(_examineObject);
-            _postProcessingVolume.SetActive(false);
+            if (_postProcessingVolume != null)
+                _postProcessingVolume.SetActive(false);
         }
 
         protected override void Update()

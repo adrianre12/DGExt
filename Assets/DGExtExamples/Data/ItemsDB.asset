@@ -377,6 +377,7 @@ MonoBehaviour:
   items:
   - {fileID: -8123054321090415038}
   - {fileID: 4531610141893146662}
+  - {fileID: 4213189864931149337}
   currencies:
   - {fileID: -7599333476541210069}
   - {fileID: 2575756416156177951}
@@ -490,6 +491,56 @@ MonoBehaviour:
     currency: {fileID: -7599333476541210069}
   - factor: 100
     currency: {fileID: 253804120908306885}
+--- !u!114 &4213189864931149337
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
+  m_Name: Shield
+  m_EditorClassIdentifier: 
+  m_Id: 647f4154-092e-43a1-a626-c2ca56eeed6f
+  m_ItemName: Shield example
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: b97c91e8b348f3f4ebdc11f5c82182cd, type: 3}
+  m_Prefab: {fileID: 3170293576777951, guid: 2093f510ff8336e438ce6403819f1e2e, type: 3}
+  m_Description: A Shield for looking at.
+  m_Category: {fileID: -7256446725338358309}
+  m_IsSellable: 0
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -7599333476541210069}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -7599333476541210069}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 1
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties: []
+  m_UseCategoryCooldown: 1
+  m_Cooldown: 1
+  actions: []
+  m_OverrideEquipPrefab: {fileID: 0}
+  m_Region: []
+  references:
+    version: 1
 --- !u!114 &4531610141893146662
 MonoBehaviour:
   m_ObjectHideFlags: 1
