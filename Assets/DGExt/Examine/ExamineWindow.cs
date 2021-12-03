@@ -21,7 +21,7 @@ namespace DGExt
         [SerializeField]
         protected float _panSpeed = 1;
         [SerializeField]
-        protected float _scrollSpeed = 0.1f;
+        protected float _zoomSpeed = 0.1f;
 
         private float _startDistance = 3f;
         private float _panX = 5f;
@@ -100,7 +100,7 @@ namespace DGExt
                 }
                 else
                 { // zoom
-                    _zoom = Mathf.Clamp(Input.mouseScrollDelta.y * _scrollSpeed + _zoom, _minZoom, _maxZoom);
+                    _zoom = Mathf.Clamp(Input.mouseScrollDelta.y * _zoomSpeed + _zoom, _minZoom, _maxZoom);
                     pos.z = _startDistance / _zoom;
                     _examineObject.transform.localPosition = pos;
                 }
