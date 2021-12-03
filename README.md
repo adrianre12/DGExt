@@ -1,27 +1,40 @@
 # DGExt
 These are extensions for Devion Games Inventory System that I am using in my games that I think could be useful to others. The current features are;
-- Conditional flow for Trigger behaviours.
-- Using Action Templates in Trigger behaviours.
-- Using more than one Action Template.
-- Trigger prompts can be changed by a behaviour Action or custom scripts.
-- Outlining of items when the Trigger prompt is displayed.
-- Being able to use the Quest window from within an action.
+- Sub-ActionTemplates
+  - Conditional flow for Trigger behaviours.
+  - Using Action Templates in Trigger behaviours.
+  - Using more than one Action Template.
+  - Trigger prompts can be changed by a behaviour Action or custom scripts.
+  - Outlining of items when the Trigger prompt is displayed.
+  - Being able to use the Quest window from within an action.
+- Examine
+  - Adds to the item trigger the option to examine an item. 
+  - Rotate, Zoom and Pan the item.
+  - Optional blurring of scene while examining an item. 
 
-The project includes a Demo scene to show use cases. More details can be found in the [documentation.](/Documentation/Sub-ActionTemplates.pdf)
+The project includes the scenes;
+- Demo: Shows the Sub-ActionTemplate use cases. More details can be found in [Sub-ActionTemplates.pdf](/Documentation/Sub-ActionTemplates.pdf)
+- Examine: Is an example of how to configure an object to be examined. More details can be found in [Examine.pdf](/Documentation/Examine.pdf)
+
 Videos can be found in the playlist [DGExt](https://www.youtube.com/playlist?list=PLCZolJ4GDO6_87a42ku9bACn9FbKyGVQJ)
 
 ## Install
-This requires the Free assets 'Devion Games Inventory Manager' or the Paid for 'RPG Kit'
-Optionally it is possible to add item outlining with the free asset 'Quick Outline'.
+This requires the Free asset 'Devion Games Inventory Manager' or the Paid for 'Devion Games RPG Kit', and the Unity PostProcessing package.
+Note: The PostProcessing package is only required if DGExtExamples or the Examine function are being used.
+Note: Optionally it is possible to add item outlining with the free asset 'Quick Outline'.
 
-Steps to run the demo;
+Steps to install the examples;
 - Create a new Unity Project.
-- Start Unity and add the Devion Games Asset.
-- Using the Devion Module Manager install the Quest System and Quest Examples.
-- Use the Inventory systems Integration asset under Quest System Integrations.
+- Using the Package Manager install the PostProcessing package.
+- Using the Package Manager install the Devion Games Asset.
+- If using the free version 'Inventory Manager'
+  - Use the Devion Games Module Manager to install the Quest System and Quest Examples.
+  - Use the Inventory systems Integration asset under Quest System Integrations.
 - Download and install the DGExt asset.
 - Download and install the DGExtExamples asset.
-- Under Assets > DGExtExamples > Scenes open and play the Demo scene.
+- Follow the section 'Setting up the Examine scene' in [Examine.pdf](/Documentation/Examine.pdf)
+
+The example scenes are under Assets > DGExtExamples > Scenes.
 
 ## Adding Outlining
 An example of how to do item outlining can be added. This will outline items with a red border when the tooltip is displayed.

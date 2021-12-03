@@ -50,5 +50,12 @@ namespace DGExt
                 }
             }
         }
+
+        public override bool Use()
+        {
+            if (WindowOpen)
+                return false;
+            return base.Use();
+        }
     }
 }
