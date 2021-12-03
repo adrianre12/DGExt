@@ -30,8 +30,8 @@ Steps to install the examples;
 - If using the free version 'Inventory Manager'
   - Use the Devion Games Module Manager to install the Quest System and Quest Examples.
   - Use the Inventory systems Integration asset under Quest System Integrations.
-- Download and install the DGExt asset.
-- Download and install the DGExtExamples asset.
+- Download and install the DGExt asset. See [Releases](https://github.com/adrianre12/DGExt/releases)
+- Download and install the DGExtExamples asset. See [Releases](https://github.com/adrianre12/DGExt/releases)
 - Follow the section 'Setting up the Examine scene' in [Examine.pdf](/Documentation/Examine.pdf)
 
 The example scenes are under Assets > DGExtExamples > Scenes.
