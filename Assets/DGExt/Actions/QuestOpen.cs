@@ -24,6 +24,7 @@ namespace DGExt
 
         protected QuestCollection m_QuestCollection;
         protected bool InUse;
+        protected bool SelectInUse;
 
         public override void OnSequenceStart()
         {
@@ -36,7 +37,6 @@ namespace DGExt
             if (!CanUse())
                 return;
 
-            InUse = true;
             currentUsedWindow = QuestManager.UI.questWindow;
 
             for (int i = 0; i < this.m_QuestCollection.Count; i++)
@@ -49,10 +49,25 @@ namespace DGExt
                         InUse = false;
                     });
                     currentUsedWindow.Show(quest);
+                    InUse = true;
+                    return;
+                }
+            }
+
+            if (SelectFirstQuest) // dont go further if we have an active quest.
+            {
+                for (int i = 0; i < this.m_QuestCollection.Count; i++)
+                {
+                    Quest quest = this.m_QuestCollection[i];
+                    if (quest.Status == Status.Active)
+                        return;
                 }
             }
 
             string[] quests = this.m_QuestCollection.Where(x => x.CanActivate()).Select(y => y.Name).ToArray();
+            if (quests.Length == 0)
+                return;
+
             if (quests.Length == 1 || SelectFirstQuest)
             {
                 currentUsedWindow.RegisterListener("OnClose", (CallbackEventData eventData) =>
@@ -60,23 +75,25 @@ namespace DGExt
                     InUse = false;
                 });
                 currentUsedWindow.Show(this.m_QuestCollection.FirstOrDefault(x => x.Name == quests[0]));
+                InUse = true;
+                return;
             }
-            else if (quests.Length > 1)
+            else // if (quests.Length > 1)
             {
                 DialogBox questSelection = QuestManager.UI.questSelectionWindow;
-                Debug.Log(questSelection);
+                //Debug.Log(questSelection);
                 questSelection.RegisterListener("OnClose", (CallbackEventData eventData) =>
                 {
-                    InUse = false;
+                    SelectInUse = false;
                 });
 
+                SelectInUse = true;
                 questSelection.Show(this.m_Title, this.m_Text, (int result) =>
                 {
                     currentUsedWindow.Show(this.m_QuestCollection.FirstOrDefault(x => x.Name == quests[result]));
+                    InUse = true;
                 }, quests);
             }
-
-            return;
         }
 
         public override ActionStatus OnUpdate()
@@ -87,7 +104,7 @@ namespace DGExt
         private bool CanUse()
         {
             Quest quest = GetNextQuest();
-            return !InUse && quest != null;
+            return !InUse && !SelectInUse && quest != null;
         }
 
         private Quest GetNextQuest()
