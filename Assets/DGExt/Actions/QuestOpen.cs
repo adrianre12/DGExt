@@ -53,7 +53,15 @@ namespace DGExt
             }
 
             string[] quests = this.m_QuestCollection.Where(x => x.CanActivate()).Select(y => y.Name).ToArray();
-            if (quests.Length > 1)
+            if (quests.Length == 1 || SelectFirstQuest)
+            {
+                currentUsedWindow.RegisterListener("OnClose", (CallbackEventData eventData) =>
+                {
+                    InUse = false;
+                });
+                currentUsedWindow.Show(this.m_QuestCollection.FirstOrDefault(x => x.Name == quests[0]));
+            }
+            else if (quests.Length > 1)
             {
                 DialogBox questSelection = QuestManager.UI.questSelectionWindow;
                 Debug.Log(questSelection);
@@ -67,14 +75,7 @@ namespace DGExt
                     currentUsedWindow.Show(this.m_QuestCollection.FirstOrDefault(x => x.Name == quests[result]));
                 }, quests);
             }
-            else if (quests.Length == 1 || SelectFirstQuest)
-            {
-                currentUsedWindow.RegisterListener("OnClose", (CallbackEventData eventData) =>
-                {
-                    InUse = false;
-                });
-                currentUsedWindow.Show(this.m_QuestCollection.FirstOrDefault(x => x.Name == quests[0]));
-            }
+
             return;
         }
 
